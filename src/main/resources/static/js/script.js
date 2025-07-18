@@ -1,0 +1,34 @@
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        document.querySelector('.loader-wrapper').style.opacity = '0';
+        setTimeout(() => {
+            document.querySelector('.loader-wrapper').style.display = 'none';
+        }, 500)
+    }, 1000);
+})
+
+
+// Typing animation for main terminal
+new Typed("#typed-text", {
+  strings: [
+    "> Initializing profile...\n> System: Online ✅\n> Welcome to my portfolio!\n> Username: Abhishek_Mishra\n> Role: Backend Engineer\n> Skills: Mention below \n> Mission: Write clean code.\n> Explore my projects & skills.\n> Let's connect & collaborate!\n> Enjoy your visit! 😊"
+  ].map(str => str.replace(/&/g, "&amp;")),
+  typeSpeed: 45,
+  startDelay: 500,
+  showCursor: true,
+  cursorChar: '|',
+  smartBackspace: false
+});
+
+
+// Smooth scroll for navigation links
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.header');
+  if(window.scrollY > 100){
+    header.classList.add('scrolled');
+  }else{
+    header.classList.remove('scrolled');
+  }
+});
+
+

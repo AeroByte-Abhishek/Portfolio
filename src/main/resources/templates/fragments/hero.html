@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <th:block th:fragment="site-hero">
+    <section class="hero">
+      <div class="hero-background"></div>
+      <!-- Main Terminal UI -->   
+      <div class="terminal">
+        <div class="terminal-header">
+          <div class="circle-group">
+            <span class="circle red"></span>
+            <span class="circle yellow"></span>
+            <span class="circle green"></span>
+          </div>
+          <span class="terminal-title">>_terminal-abhishek:~</span>
+        </div>
+
+        <div class="terminal-body">
+          <pre id="typed-text"></pre>
+        </div>
+      </div>
+
+      <!-- Centered Action Buttons -->
+      <div class="actions">
+        <a
+          href="/images/Resume.pdf"
+          download="Abhishek_Mishra_Resume.pdf"
+          class="download-btn"
+          >Download Resume</a
+        >
+
+        <button class="contact-btn">
+          <i class="fa-solid fa-envelope"></i>Get In Touch
+        </button>
+      </div>
+
+      <!-- <a href="#about" class="scroll-circle"> -->
+      <!-- <i class="fa-solid fa-arrow-down-long"></i> -->
+      <!-- </a> -->
+
+      <div class="scroll-indicator">
+        <span>Scroll down</span>
+        <div class="scroll-indicator-line">
+          <div class="scroll-indicator-dot"></div>
+        </div>
+      </div>
+    </section>
+  </th:block>
+</html>

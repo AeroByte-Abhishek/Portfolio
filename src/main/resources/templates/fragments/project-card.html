@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <th:block th:fragment="projectCard(title, description, tags, gitHubLink, liveLink)">
+    <div class="project-card">
+      <h3 th:text="${title}">Project Title</h3>
+      <p th:text="${description}">Project Description</p>
+
+      <div class="tags">
+        <span th:each="tag : ${tags}" th:text="${tag}"></span>
+      </div>
+
+      <div class="project-links">
+        <a th:href="${gitHubLink}" target="_blank">
+          <i class="fab fa-github"></i> <span>GitHub</span>
+        </a>
+        <a th:href="${liveLink}" target="_blank">
+          <i class="fas fa-external-link-alt"></i> <span>Live</span>
+        </a>
+      </div>
+    </div>
+  </th:block>
+</html>

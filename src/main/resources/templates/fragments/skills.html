@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <th:block th:fragment="site-skills">
+    <div class="container">
+        <section class="skills-section" id="skills">
+            <div class="headings-wrapper">
+                <h2>My Skills</h2>
+            </div>
+
+            <div class="skills-container">
+                <div
+                    th:replace = "fragments/skills-card :: skillsCard(
+                        'Java',
+                        'Core programming language',
+                        './images/java-icon.svg',
+                        'https://www.oracle.com/java/'
+                    )"
+                >
+                </div>
+
+                <div
+                    th:replace = "fragments/skills-card :: skillsCard(
+                        'Spring Boot',
+                        'Framework for building Java applications',
+                        './images/springio-icon.svg',
+                        'https://spring.io/projects/spring-boot'
+                    )"
+                >
+                </div>
+
+                <div
+                    th:replace = "fragments/skills-card :: skillsCard(
+                        'ThymeLeaf',
+                        'Server-side Java template engine',
+                        './images/thymeleaf-icon.svg',
+                        'https://www.thymeleaf.org/'
+                    )"
+                >
+                </div>
+                
+
+                <div
+                    th:replace = "fragments/skills-card :: skillsCard(
+                        'MySQL',
+                        'Relational database',
+                        './images/mysql-icon.svg',
+                        'https://www.mysql.com/'
+                    )"
+                >
+                </div>
+
+                <div
+                    th:replace = "fragments/skills-card :: skillsCard(
+                        'Version Control',
+                        'Git and GitHub',
+                        './images/github-mark-white.svg',
+                        'https://git-scm.com/'
+                    )"
+                >
+                </div>
+
+                <div
+                    th:replace = "fragments/skills-card :: skillsCard(
+                        'Build Tools',
+                        'Maven and Gradle',
+                        './images/build-tools.svg',
+                        'https://spring.io/projects/spring-boot'
+                    )"
+                >
+                </div>
+
+                <div
+                    th:replace = "fragments/skills-card :: skillsCard(
+                        'Code Editors',
+                        'VS Code and IntelliJ IDEA',
+                        './images/front-end.png',
+                        'https://code.visualstudio.com/'
+                    )"
+                >
+                </div>
+
+                <div
+                    th:replace = "fragments/skills-card :: skillsCard(
+                        'Docker',
+                        'Basic containerization skills',
+                        './images/docker-icon.svg',
+                        'https://www.docker.com/'
+                    )"
+                >
+                </div>
+
+                <div
+                    th:replace = "fragments/skills-card :: skillsCard(
+                        'Kubernetes',
+                        'Just starting with container orchestration',
+                        './images/kubernetes-icon.svg',
+                        'https://kubernetes.io/'
+                    )"
+                >
+                </div>
+
+                <div
+                    th:replace = "fragments/skills-card :: skillsCard(
+                        'Kafka',
+                        'Basic understanding of event streaming',
+                        './images/kafka.svg',
+                        'https://kafka.apache.org/'
+                    )"
+                >
+                </div>
+
+                <div
+                    th:replace = "fragments/skills-card :: skillsCard(
+                        'AWS',
+                        'Basic cloud services knowledge',
+                        './images/aws.svg',
+                        'https://aws.amazon.com/'
+                    )"
+                >
+                </div>
+
+                <div
+                    th:replace = "fragments/skills-card :: skillsCard(
+                        'RabbitMQ',
+                        'Familiar with message queuing',
+                        './images/rabbitmq-icon.svg',
+                        'https://www.rabbitmq.com/'
+                    )"
+                >
+                </div>
+
+                <div
+                    th:replace = "fragments/skills-card :: skillsCard(
+                        'Microservices',
+                        'Understanding of microservices architecture',
+                        './images/microservice.svg',
+                        'https://spring.io/projects/spring-boot'
+                    )"
+                >
+                </div>
+                
+                <div
+                    th:replace = "fragments/skills-card :: skillsCard(
+                        'HTML',
+                        'Understanding of HTML',
+                        './images/html5-icon.svg',
+                        'https://developer.mozilla.org/en-US/docs/Web/HTML'
+                    )"
+                >
+                </div>
+
+                <div
+                    th:replace = "fragments/skills-card :: skillsCard(
+                        'CSS',
+                        'Understanding of basic CSS',
+                        './images/w3_css-icon.svg',
+                        'https://developer.mozilla.org/en-US/docs/Web/CSS'
+                    )"
+                >
+                </div>
+
+                <div
+                    th:replace = "fragments/skills-card :: skillsCard(
+                        'System Design',
+                        'Basic understanding of HLD & LLD',
+                        './images/system-design-icon.svg',
+                        'https://developer.mozilla.org/en-US/docs/Web/CSS'
+                    )"
+                >
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+    </th:block>
+</html>

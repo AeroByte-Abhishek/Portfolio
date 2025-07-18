@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <th:block th:fragment="site-projects">
+    <div class="container">
+      <section class="project-section" id="projects">
+        <!-- 🔥 Background Video -->
+        <video autoplay muted loop playsinline class="background-video">
+          <source src="/images/videoplayback (1).mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <div class="headings-wrapper">
+          <h2>My Projects</h2>
+        </div>
+
+        <div class="project-container">
+          <div th:replace="fragments/project-card :: projectCard(
+            'E-Commerce Website',
+            'Full-stack e-commerce solution with Spring Boot, MySQL, and RESTful APIs',
+            ${ecommerceTags},
+            'https://github.com/your-repo/ecommerce',
+            'https://yourdomain.com/ecommerce'
+          )"></div>
+
+          <div th:replace="fragments/project-card :: projectCard(
+            'Portfolio Website',
+            'Personal portfolio showcasing my skills and projects using Thymeleaf and Spring Boot',
+            ${portfolioTags},
+            'https://github.com/your-repo/portfolio',
+            'https://yourdomain.com/portfolio'
+          )"></div>
+
+          <div th:replace="fragments/project-card :: projectCard(
+            'Blog Website',
+            'A personal blog built with Spring Boot and Thymeleaf',
+            ${blogTags},
+            'https://github.com/your-repo/blog',
+            'https://yourdomain.com/blog'
+          )"></div>
+
+          <div th:replace="fragments/project-card :: projectCard(
+            'Ticket Booking System',
+            'A Console based Ticket Booking System where users can book ticket for travelling from one place to another',
+            ${ticketBookingTags},
+            'https://github.com/your-repo/ticket-booking',
+            'https://yourdomain.com/ticket-booking'
+          )"></div>
+        </div>
+      </section>
+    </div>
+  </th:block>
+</html>
