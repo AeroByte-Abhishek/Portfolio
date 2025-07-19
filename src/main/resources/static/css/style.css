@@ -46,7 +46,7 @@ a{
     transition: all 0.3s ease;
 }
 
-/* Loading Animation */
+/*==== Loader Styles ====*/
 
 .loader-wrapper{
     position: fixed;
@@ -115,8 +115,9 @@ a{
     }
 }
 
+/*==== End of Loader Styles ====*/
 
-/* Floating Elements */
+/*=== Floating Shapes ===*/
 .floating-shape{
     position: absolute;
     border-radius: 50%;
@@ -149,6 +150,8 @@ a{
     left: 10%;
 }
 
+
+/*=== Hero Section Background ===*/
 .hero-background {
     position: absolute;
     top: 0;
@@ -164,7 +167,7 @@ a{
 }
 
 
-/* Header Section */
+/*=== Header Section ===*/
 .header{
    position: fixed;
    width: 100%;
@@ -188,17 +191,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
-
-/* .logo{
-    
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--light-color);
-    position: relative;
-    
-} */
 
 .logo img {
     width: 48px;
@@ -207,6 +200,12 @@ a{
     display: block;
     z-index: 2;
 }
+
+.logo a{
+    z-index: 0;
+}
+
+
 
 .logo {
     display: flex;
@@ -559,7 +558,7 @@ a{
          }
     }
 
-    /* ====== END OF HERO SECTION ====== */
+/* ====== END OF HERO SECTION ====== */
 
 
 /* ===== About Section ===== */
@@ -686,13 +685,6 @@ a{
   padding: 0 1.5rem;
 }
 
-/* .container1 {
-  max-width: 1615px;
-  margin: 0 auto;
-  margin-bottom: 2rem;
-  padding: 0 1.5rem;
-} */
-
 @media (max-width: 768px) {
   .container {
     max-width: 100%;
@@ -718,14 +710,14 @@ a{
 
 .project-section{
     position: relative;
-  padding: 2rem 1rem;
-  background: var(--darker-color); /* fallback if video fails */
-  overflow: hidden;
-  z-index: 0;
+    padding: 2rem 1rem;
+    background: var(--darker-color); /* fallback if video fails */
+    overflow: hidden;
+    z-index: 0;
 }
 
 .background-video {
-    position: absolute;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -738,7 +730,7 @@ a{
 }
 
 .project-container{
-     display: flex;
+  display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
@@ -764,8 +756,8 @@ a{
 
 .project-card:hover {
     transform: translateY(-6px);
-  box-shadow: 0 0 25px rgba(124, 58, 237, 0.6); /* Optional purple glow */
-  border-color: rgba(124, 58, 237, 0.3);        /* Optional purple border glow */
+    box-shadow: 0 0 25px rgba(124, 58, 237, 0.6); /* Optional purple glow */
+    border-color: rgba(124, 58, 237, 0.3);        /* Optional purple border glow */
 }
 
 .project-card h3 {
@@ -868,12 +860,6 @@ a{
   z-index: 0;
 }
 
-
-/* .project-links a:hover { */
-  /* color: #fff; */
-  /* transform: scale(1.2); */
-/* } */
-
 /* ====== END OF PROJECT SECTION ====== */
 
 /* ====== SKILLS SECTION ====== */
@@ -943,6 +929,7 @@ a{
 }
 
 /* ====== END OF SKILLS SECTION ====== */
+
 
 /* ====== CONTACT SECTION ====== */
 
