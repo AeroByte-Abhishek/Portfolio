@@ -13,7 +13,7 @@ new Typed("#typed-text", {
   strings: [
     "> Initializing profile...\n> System: Online ✅\n> Welcome to my portfolio!\n> Username: Abhishek_Mishra\n> Role: Backend Engineer\n> Skills: Mention below \n> Mission: Write clean code.\n> Explore my projects & skills.\n> Let's connect & collaborate!\n> Enjoy your visit! 😊"
   ].map(str => str.replace(/&/g, "&amp;")),
-  typeSpeed: 45,
+  typeSpeed: 20,
   startDelay: 500,
   showCursor: true,
   cursorChar: '|',
