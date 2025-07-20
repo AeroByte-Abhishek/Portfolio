@@ -216,7 +216,7 @@ a{
         background: rgba(5, 5, 16, 0.5);
         backdrop-filter: blur(10px);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        padding: 2rem 8%;
+        padding: 1rem 2%;
     }
 }
 
