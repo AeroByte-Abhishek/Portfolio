@@ -67,6 +67,19 @@ a{
     height: 200px;
 }
 
+@media screen and (max-width: 768px) {
+    .loader {
+        width: 120px;
+        height: 120px;
+    }
+
+    .loader-logo img {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    
+}
+
 .loader-logo{
     display: flex;
     justify-content: center;
@@ -687,7 +700,7 @@ a{
     }
 
     .hackathon-box h3{
-        font-size: 1.2rem !important;
+        font-size: 1.1rem !important;
     }
 
     .hackathon-box li{
@@ -909,9 +922,14 @@ a{
     font-size: 1.04em !important;
   }
 
-  .bookmarkBtn {
+.bookmarkBtn {
     width: 90%;
-  }
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.13);
+}
 }
 
 .IconContainer {
