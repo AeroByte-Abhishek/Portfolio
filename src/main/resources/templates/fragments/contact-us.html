@@ -77,7 +77,8 @@
                             <textarea class="form-control" name="message" id="message" placeholder="Type your message here..."></textarea>
                         </div>
 
-                        <button class="btn btn-primary" type="submit">
+                        
+                        <button  class="btn btn-primary" type="submit">
                             Send Message <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
@@ -87,6 +88,18 @@
 
         </div>
     </section>
+
+    <!-- ✅ Popup (hardcoded) -->
+    <div class="pop-up-card hidden" id="popup-card">
+        <button type="button" class="pop-up-dismiss" onclick="closePopup()">×</button>
+        <div class="pop-up-header">
+            <div class="pop-up-content">
+                <span class="pop-up-title" id="popup-title">Popup Title</span>
+                <p class="pop-up-message" id="popup-message">Popup message goes here.</p>
+            </div>
+        </div>
+    </div>
+
 
 </th:block>
 </body>

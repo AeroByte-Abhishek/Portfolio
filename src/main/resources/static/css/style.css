@@ -790,10 +790,10 @@ a{
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;           /* fills container without stretching */
-  z-index: -1;                 /* send it behind everything */          /* smooths the sharp lines */
+  object-fit: cover;           
+  z-index: -1;              
   pointer-events: none;
-  opacity: 0.3;               /* makes the video less distracting */
+  opacity: 0.3;         
   margin-top: 10%;
 }
 
@@ -837,15 +837,15 @@ a{
 .project-card p {
     font-size: 1rem;
     color: var(--text-light);
-    margin-bottom: 1.5rem;
 }
 
 .tags{
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     font-weight: 700;
+    margin-top: 1.5rem;
 }
 
 .tags span{
@@ -862,56 +862,105 @@ a{
     background: #020105;
 }
 
-.project-links{
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-    flex-wrap: wrap;
+.project-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-.project-links a{
-    color: var(--text-color);
-    transition: 0.3s ease;
-    background: transparent;
-    border-radius: 8px;
-    padding: 0.7rem 1.4rem;
-    border: 1px solid #60a5fa;
-    display: flex;
-    font-size: 0.9rem;
-    cursor: pointer;
-    align-items: center;
-    gap: 0.5rem;
-    transition: all 0.3s ease;
-    margin-top: 0.5rem;
+.bookmarkBtn {
+  width: 150px;
+  height: 50px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.349);
+  background-color: rgb(12, 12, 12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  text-decoration: none;
 }
 
-@media (max-width: 450px) {
-    .project-links a {
-        width: 90%;
-        justify-content: center;
-        gap: 0.9rem;
-        align-items: center;
-    }
+/* ✨ Desktop-only hover effect */
+@media (hover: hover) and (min-width: 768px) {
+   .bookmarkBtn:hover .IconContainer {
+    width: 90px;
+  }
 
-    .project-links{
-        justify-content: center;
-    }
-    
+  .bookmarkBtn:hover .text {
+    transform: translate(10px);
+    width: 0;
+    font-size: 0;
+  }
 }
 
-.project-links a:hover{
-    background: #60a5fa;
-  color: #000;
-  box-shadow: 0 0 8px #60a5fa;
+/* ✨ On mobile: remove circular icon background */
+@media (hover: none), (max-width: 767px) {
+   .IconContainer {
+    background: none !important;
+    width: 30px !important; /* Reset width to prevent centering */
+  }
+
+  .text {
+    transform: none !important;
+    width: 60px !important;
+    font-size: 1.04em !important;
+  }
+
+  .bookmarkBtn {
+    width: 90%;
+  }
 }
 
-.project-links a span{
-    font-size: 1rem;
+.IconContainer {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+  transition-duration: 0.3s;
 }
 
-.project-links a i {
-    font-size: 1.2rem;
+.icon {
+  color: white;
+  font-size: 1.3rem;
 }
+
+.text {
+  height: 100%;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 1;
+  transition-duration: 0.3s;
+  font-size: 1.04em;
+}
+
+.bookmarkBtn:hover .IconContainer {
+  width: 140px;
+  transition-duration: 0.3s;
+}
+
+.bookmarkBtn:hover .text {
+  transform: translate(10px);
+  width: 0;
+  font-size: 0;
+  transition-duration: 0.3s;
+}
+
+.bookmarkBtn:active {
+  transform: scale(0.95);
+  transition-duration: 0.3s;
+}
+
 
 .project-section::after {
   content: '';
@@ -1272,4 +1321,111 @@ textarea.form-control{
         width: 10px;
     }
     
+}
+
+
+/*==== End of Scroll Bar Styles ====*/
+
+/*==== Pop-Up ====*/
+.pop-up-card {
+ position: fixed;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  max-width: 320px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: left;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .pop-up-card {
+    width: 70%;
+    max-width: none;
+    padding: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+    
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* Visible state (to be toggled by JS) */
+.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.pop-up-dismiss {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  color: black;
+  border: 2px solid #D1D5DB;
+  font-size: 1rem;
+  font-weight: 300;
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  transition: .3s ease;
+}
+
+.pop-up-dismiss:hover {
+  background-color: #ee0d0d;
+  border: 2px solid #ee0d0d;
+  color: #fff;
+}
+
+.pop-up-header {
+  padding: 1.25rem 1rem 1rem 1rem;
+}
+
+.pop-up-content {
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.pop-up-title {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+.pop-up-message {
+  margin-top: 0.5rem;
+  color: var(--text-color);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+@keyframes animate-pop-up {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.09);
+  }
 }

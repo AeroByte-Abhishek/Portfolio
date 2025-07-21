@@ -10,13 +10,21 @@
       </div>
 
       <div class="project-links">
-        <a th:href="${gitHubLink}" target="_blank">
-          <i class="fab fa-github"></i> <span>GitHub</span>
-        </a>
-        <a th:href="${liveLink}" target="_blank">
-          <i class="fas fa-external-link-alt"></i> <span>Live</span>
-        </a>
-      </div>
+  <a th:href="${gitHubLink}" target="_blank" class="bookmarkBtn">
+    <span class="IconContainer">
+      <i class="fab fa-github icon"></i>
+    </span>
+    <p class="text">GitHub</p>
+  </a>
+
+  <a th:href="${liveLink}" target="_blank" class="bookmarkBtn">
+    <span class="IconContainer">
+      <i class="fas fa-external-link-alt icon"></i>
+    </span>
+    <p class="text">Live</p>
+  </a>
+</div>
+
     </div>
   </th:block>
 </html>
