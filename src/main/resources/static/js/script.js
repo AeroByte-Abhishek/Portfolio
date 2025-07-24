@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
 // Typing animation for main terminal
 new Typed("#typed-text", {
   strings: [
-    "> Initializing profile...\n> System: Online ✅\n> Welcome to my portfolio!\n> Username: Abhishek_Mishra\n> Role: Backend Engineer\n> Skills: Mention below \n> Mission: Write clean code.\n> Explore my projects & skills.\n> Let's connect & collaborate!\n> Enjoy your visit! 😊"
+    "> Initializing profile...\n> System: Online ✅\n> Welcome to my portfolio!\n> Username: Abhishek_Mishra\n> Role: Backend Engineer\n> Skills: Mentioned below \n> Mission: Write clean code.\n> Explore my projects & skills.\n> Let's connect & collaborate!\n> Enjoy your visit! 😊"
   ].map(str => str.replace(/&/g, "&amp;")),
   typeSpeed: 20,
   startDelay: 500,
