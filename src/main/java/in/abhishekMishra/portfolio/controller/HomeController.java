@@ -9,7 +9,7 @@ import java.util.List;
 @Controller
 public class HomeController {
 
-    @GetMapping({ "/", "/home" })
+    @GetMapping({ "/", "/index" })
     public String showHomePage(Model model) {
         // ✅ Move the tag list creation to Java code
         List<String> expenseTrackerTags = List.of("Spring Boot", "MySQL", "REST API", "React Native", "Docker", "Kafka", "Kubernetes");
@@ -23,8 +23,8 @@ public class HomeController {
 
         List<String> ticketBookingTags = List.of("Java", "Maven", "Mapping", "Hash Password", "BCrypt");
         model.addAttribute("ticketBookingTags", ticketBookingTags);
-        
-        return "home"; // This renders home.html which includes project fragment
+
+        return "index"; // This renders index.html which includes project fragment
 
     }
 }
