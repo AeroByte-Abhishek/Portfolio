@@ -1226,7 +1226,7 @@ a{
     border: 1px solid rgba(255, 255, 255, 0.01);
     border-radius: 8px;
     color: var(--text-color);
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     font-size: 1rem;
     transition: all 0.3s ease;
 }
