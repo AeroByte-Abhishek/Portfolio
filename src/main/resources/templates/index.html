@@ -23,27 +23,28 @@
   <meta property="twitter:title" content="Abhishek Mishra | Java Backend Developer" />
   <meta property="twitter:description" content="Explore my developer portfolio — projects, skills, and contact info all in one place." />
   <meta property="twitter:image" content="https://abhishek-mishra.me/images/abhishek-mishra-portfolio-preview.png" />
-
-  <!-- Apple Touch Icon -->
+    <!-- Apple Touch Icon (iOS Home Screen) -->
 <link rel="apple-touch-icon" sizes="180x180" th:href="@{/apple-touch-icon.png}" />
 
-<!-- Favicon for Light Mode (white background → use black icon) -->
-<link rel="icon" type="image/png" th:href="@{/am-logo.png}" media="(prefers-color-scheme: light)" />
+<!-- Favicon for Light Mode: Black Logo (Transparent PNG) -->
+<link rel="icon" type="image/png" sizes="48x48" th:href="@{/am-logo.png}" media="(prefers-color-scheme: light)" />
 
-<!-- Favicon for Dark Mode (dark background → use white icon) -->
-<link rel="icon" type="image/png" th:href="@{/favicon.ico}" media="(prefers-color-scheme: dark)" />
+<!-- Favicon for Dark Mode: White Logo (Transparent ICO) -->
+<link rel="icon" type="image/x-icon" sizes="48x48" th:href="@{/favicon.ico}" media="(prefers-color-scheme: dark)" />
 
-<!-- Optional SVG or fallback PNG (if needed) -->
-<link rel="icon" type="image/svg+xml" th:href="@{/favicon.svg}" />
+<!-- Optional fallback favicon if media query not supported -->
 <link rel="icon" type="image/png" sizes="96x96" th:href="@{/favicon-96x96.png}" />
 
-<!-- Manifest for PWA -->
+<!-- SVG Icon (for modern browsers, optional) -->
+<link rel="icon" type="image/svg+xml" th:href="@{/favicon.svg}" />
+
+<!-- Web App Manifest (PWA metadata) -->
 <link rel="manifest" th:href="@{/site.webmanifest}" />
 
+<!-- PWA Android Icons -->
+<link rel="icon" type="image/png" sizes="192x192" th:href="@{/am-logo.png}" />
+<link rel="icon" type="image/png" sizes="512x512" th:href="@{/am-logo.png}" />
 
-  <!-- PWA Android Icons -->
-  <link rel="icon" type="image/png" sizes="192x192" href="/am-logo.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="/am-logo.png" />
 
   <link
     rel="stylesheet"
