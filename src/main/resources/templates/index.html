@@ -1,58 +1,84 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
-  <!-- Basic Meta -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abhishek Mishra Portfolio</title>
-  <meta name="description" content="Java Backend Developer | Spring Boot • MySQL • REST APIs • Portfolio" />
-  <meta name="keywords" content="Java Developer, Backend, Spring Boot, REST API, Portfolio, Abhishek" />
-  <meta name="author" content="Abhishek" />
 
-  <!-- Theme Color for Mobile Browsers -->
-  <meta name="theme-color" content="#0f172a" />
+  <!--Meta tags for SEO-->
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Abhishek Mishra | Java Backend Developer" />
+  <meta name="description" content="Explore my developer portfolio — projects, skills, and contact info all in one place." />
 
-  <!-- Preload Google Font -->
-  <link
-    rel="preload"
-    as="style"
-    href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-    onload="this.onload=null;this.rel='stylesheet'"
-  />
-  <noscript>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-    />
-  </noscript>
-
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.png" type="image/png" />
-
-  <!-- Open Graph Meta (for link previews) -->
-  <meta property="og:title" content="Abhishek | Java Backend Developer" />
-  <meta property="og:description" content="Java Backend Developer skilled in Spring Boot, MySQL, REST APIs." />
-  <meta property="og:image" content="https://yourdomain.com/preview-image.png" />
-  <meta property="og:url" content="https://yourdomain.com/" />
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://abhishek-mishra.me/" />
+  <meta property="og:title" content="Abhishek Mishra | Java Backend Developer" />
+  <meta property="og:description" content="Explore my developer portfolio — projects, skills, and contact info all in one place." />
+  <meta property="og:image" content="https://abhishek-mishra.me/images/abhishek-mishra-portfolio-preview.png" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Abhishek | Java Backend Developer" />
-  <meta name="twitter:description" content="Java Backend Developer skilled in Spring Boot, MySQL, REST APIs." />
-  <meta name="twitter:image" content="https://yourdomain.com/preview-image.png" />
+  <!-- Twitter / X -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://abhishek-mishra.me/" />
+  <meta property="twitter:title" content="Abhishek Mishra | Java Backend Developer" />
+  <meta property="twitter:description" content="Explore my developer portfolio — projects, skills, and contact info all in one place." />
+  <meta property="twitter:image" content="https://abhishek-mishra.me/images/abhishek-mishra-portfolio-preview.png" />
 
-  <!-- Google Tag (Analytics) -->
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- PWA Android Icons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/am-logo.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/am-logo.png" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-W3WPZQVNMT"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-W3WPZQVNMT');
+  </script>
+
+  <!-- Schema.org Markup for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abhishek Mishra",
+    "url": "https://abhishek-mishra.me",
+    "sameAs": [
+      "https://github.com/aerobyte-abhishek",
+      "https://www.linkedin.com/in/abhishek-mishra-1251282a8/"
+    ],
+    "jobTitle": "Backend Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Self-employed"
     }
-    gtag("js", new Date());
-    gtag("config", "G-W3WPZQVNMT");
+  }
   </script>
 </head>
+
 
   <body>
     <!--For better SEO-->
