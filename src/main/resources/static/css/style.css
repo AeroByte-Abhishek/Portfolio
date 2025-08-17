@@ -1447,3 +1447,23 @@ textarea.form-control{
     transform: scale(1.09);
   }
 }
+
+
+/*Cursor effect*/
+/* CSS for splash effect */
+.splash {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: splashAnim 0.8s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes splashAnim {
+  to {
+    transform: scale(8);
+    opacity: 0;
+  }
+}
