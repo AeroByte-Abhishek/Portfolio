@@ -64,37 +64,3 @@ function closePopup(){
   popup.classList.remove("visible");
   popup.classList.add("hidden");
 }
-
-
-
-
-//Cursor effect
-let lastTime = 0;
-window.addEventListener("mousemove", (e) => {
-  const now = Date.now();
-  if (now - lastTime < 50) return; // ~20 splashes per second
-  lastTime = now;
-
-  const splash = document.createElement("div");
-  splash.className = "splash";
-
-  splash.style.left = `${e.pageX - 7.5}px`;
-  splash.style.top = `${e.pageY - 7.5}px`;
-
-  const colors = [
-    "#ff4d4d",
-    "#ffcc00",
-    "#4dff4d",
-    "#00e6e6",
-    "#3385ff",
-    "#cc33ff",
-    "#ff3399"
-  ];
-  splash.style.background = colors[Math.floor(Math.random() * colors.length)];
-
-  document.body.appendChild(splash);
-
-  setTimeout(() => splash.remove(), 600);
-});
-
-
