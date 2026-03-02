@@ -8,7 +8,6 @@ This project showcases my skills, experience, and projects in a clean and respon
 ## 🌐 Live Demo
 
 🚀 [Click here to view the live site](https://abhishek-mishra.me)
-*Currently not deployed*
 
 ---
 
