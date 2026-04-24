@@ -15,7 +15,7 @@ public class HomeController {
         List<String> expenseTrackerTags = List.of("Spring Boot", "MySQL", "REST API", "React Native", "Docker", "Kafka", "Kubernetes");
         model.addAttribute("expenseTrackerTags", expenseTrackerTags);
 
-        List<String> portfolioTags = List.of("Java", "Spring Boot", "Thymeleaf", "HTML", "CSS", "Java Script", "Maven", "Docker");
+        List<String> portfolioTags = List.of("Java", "Spring Boot", "Adzuna API", "React JS", "Tailwind CSS", "Maven", "Docker", "Web Scrapping");
         model.addAttribute("portfolioTags", portfolioTags);
 
         List<String> blogTags = List.of("Java", "Spring Boot", "Thymeleaf", "HTML", "CSS");
